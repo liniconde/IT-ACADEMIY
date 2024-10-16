@@ -1,0 +1,129 @@
+.main {
+  max-width: 1200px;
+  background-color: white;
+  margin: 0 auto;
+}
+
+.contenedor {
+  background-color: #000101;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.header {
+  background-color: #124158;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.banner {
+  background-color: #ff8b00;
+  padding: 20px 20px;
+}
+
+.banner1 {
+  background-color: #ffd701;
+  padding: 10px;
+}
+
+.contenedor__items {
+  background-color: #ea5455;
+  padding: 10px;
+}
+
+.contenido {
+  background-color: #4e4f6b;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contenido__items {
+  background-color: #1f6db1;
+  padding: 10px;
+}
+
+.contenido__items__nap {
+  background-color: #71a3c4;
+  padding: 10px;
+}
+
+.contenido2 {
+  background-color: #ea5455;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contenido2__items__nap1 {
+  background-color: #ffd701;
+  padding: 10px;
+}
+
+.foot {
+  background-color: #000101;
+  padding: 20px;
+}
+
+.foot1 {
+  background-color: lemonchiffon;
+  padding: 10px;
+}
+
+/* Media Queries para hacer la página responsiva */
+
+@media (min-width: 992px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .contenedor2 {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+
+  .header div:nth-child(2) {
+    flex-grow: 1;
+  }
+}
+
+/* Móviles: pantallas con ancho máximo de 1200px */
+@media (min-width: 768px) {
+  .contenido {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contenido__items__nap {
+    grid-column: span 2;
+  }
+}
+
+@keyframes animacion {
+  0% {
+    background: #ea5455
+  }
+
+  100% {
+    background: magenta;
+  }
+}
+
+
+.header div:nth-child(1):hover {
+  cursor: pointer;
+  animation-name: animacion;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  transition: transform 0.3s ease;
+  transform: scale(1.2);
+
+}
